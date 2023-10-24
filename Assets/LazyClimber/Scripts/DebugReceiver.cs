@@ -8,15 +8,30 @@ namespace LazyClimber
         //Variables 
         [SerializeField] private TMP_Text debugDisplayText;
         
-        //Add listener for messages
-        private void OnEnable() => ButtonTester.OnButtonClicked += HandleButtonTest;
-        
-        //Remove listener
-        private void OnDisable() => ButtonTester.OnButtonClicked -= HandleButtonTest;
-        
-        // Debug display and event handling methods
+        //Add listeners for messages
+        private void OnEnable()
+        {
+            ButtonTester.OnButtonClicked += HandleButtonTest;
+            MeshCreationManager.OnBeginDraw += HandleBeginDraw;
+            MeshCreationManager.OnEndDraw += HandleEndDraw;
+        }
+
+        //Remove listeners
+        private void OnDisable()
+        {
+            ButtonTester.OnButtonClicked -= HandleButtonTest;
+            MeshCreationManager.OnBeginDraw -= HandleBeginDraw;
+            MeshCreationManager.OnEndDraw -= HandleEndDraw;
+        }
+
+        // Event handling methods
         private void HandleButtonTest(string message) => UpdateDebugDisplay(message);
+        private void HandleBeginDraw(string message) => UpdateDebugDisplay(message);
+        private void HandleEndDraw(string message) => UpdateDebugDisplay(message);
+        
+        // Display handling methods
         private void UpdateDebugDisplay(string displayMessage) => debugDisplayText.SetText(displayMessage);
+        
         
     }
 }
