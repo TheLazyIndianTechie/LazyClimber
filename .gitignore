@@ -72,5 +72,6 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 
-# Rider directory
+# Rider directory and project files
 .idea/
+*.DotSettings
