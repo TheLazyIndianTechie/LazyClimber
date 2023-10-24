@@ -144,10 +144,14 @@ namespace LazyClimber
 
                 // Calculate new vertices
                 int vIndex = vertices.Count - 8;
-                int vIndex0 = vIndex + 0;
-                int vIndex1 = vIndex + 1;
-                int vIndex2 = vIndex + 2;
-                int vIndex3 = vIndex + 3;
+                
+                // Prev vertices indices (Reversed from 0,1,2,3)
+                int vIndex0 = vIndex + 3;
+                int vIndex1 = vIndex + 2;
+                int vIndex2 = vIndex + 1;
+                int vIndex3 = vIndex + 0;
+                
+                // New vertices Indices
                 int vIndex4 = vIndex + 4;
                 int vIndex5 = vIndex + 5;
                 int vIndex6 = vIndex + 6;
@@ -157,9 +161,73 @@ namespace LazyClimber
                 Vector3 currentMousePosition = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10f));
                 Vector3 mouseForwardVector = (lastMousePosition - currentMousePosition).normalized;
 
+                float lineThickness = 0.25f;
+                
+                // Calculate vertex
+                Vector3 topRightVertex = currentMousePosition + Vector3.Cross(mouseForwardVector, Vector3.back) * lineThickness; // Cross product of mouse forward vec and global back vector
+                Vector3 bottomRightVertex = currentMousePosition + Vector3.Cross(mouseForwardVector, Vector3.forward) * lineThickness; // Cross product of mouse forward vec and forward vec
+                Vector3 topLeftVertex = new Vector3(topRightVertex.x, topRightVertex.y, 1); // Get pos of right vertices and move z by 1
+                Vector3 bottomLeftVertex = new Vector3(bottomRightVertex.x, bottomRightVertex.y, 1); // Get pos of right vertices and move z by 1
+                
+                // Add to vertices list
+                vertices[vIndex4] = topLeftVertex;
+                vertices[vIndex5] = topRightVertex;
+                vertices[vIndex6] = bottomRightVertex;
+                vertices[vIndex7] = bottomLeftVertex;
+                
+                // Get triangle index at start of new triangles
+                int tIndex = triangles.Count - 30;
+
+                // New Top face (2,3,4,2,4,5)
+                triangles[tIndex + 0] = vIndex2;
+                triangles[tIndex + 1] = vIndex3;
+                triangles[tIndex + 2] = vIndex4;
+                triangles[tIndex + 3] = vIndex2;
+                triangles[tIndex + 4] = vIndex4;
+                triangles[tIndex + 5] = vIndex5;
+                
+                // New Right face (1,2,5,1,5,6)
+                triangles[tIndex + 6] = vIndex1;
+                triangles[tIndex + 7] = vIndex2;
+                triangles[tIndex + 8] = vIndex5;
+                triangles[tIndex + 9] = vIndex1;
+                triangles[tIndex + 10] = vIndex5;
+                triangles[tIndex + 11] = vIndex6;
+
+                // New Left face (0,7,4,0,4,5)
+                triangles[tIndex + 12] = vIndex0;
+                triangles[tIndex + 13] = vIndex7;
+                triangles[tIndex + 14] = vIndex4;
+                triangles[tIndex + 15] = vIndex0;
+                triangles[tIndex + 16] = vIndex4;
+                triangles[tIndex + 17] = vIndex3;
+                
+                // New back face (5,4,7,0,4,3)
+                triangles[tIndex + 18] = vIndex5;
+                triangles[tIndex + 19] = vIndex4;
+                triangles[tIndex + 20] = vIndex7;
+                triangles[tIndex + 21] = vIndex0;
+                triangles[tIndex + 22] = vIndex4;
+                triangles[tIndex + 23] = vIndex3;
+                
+                // New bottom face (0,6,7,0,1,6)
+                triangles[tIndex + 24] = vIndex5;
+                triangles[tIndex + 25] = vIndex4;
+                triangles[tIndex + 26] = vIndex7;
+                triangles[tIndex + 27] = vIndex0;
+                triangles[tIndex + 28] = vIndex4;
+                triangles[tIndex + 29] = vIndex3;
+                
+                // Apply new vertices and triangles to mesh
+                mesh.vertices = vertices.ToArray();
+                mesh.triangles = triangles.ToArray();
+                
+                // Update last mouse position
+                lastMousePosition = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10f));
+                
+                yield return null;
             }
             
-            yield return null;
         }
     }
 }
