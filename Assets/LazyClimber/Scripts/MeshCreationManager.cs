@@ -130,7 +130,9 @@ namespace LazyClimber
             // Assign triangles and vertices to meshes
             mesh.vertices = vertices;
             mesh.triangles = triangles;
-            
+
+            // Assign the mesh to the drawing gameobject
+            drawing.GetComponent<MeshFilter>().mesh = mesh;
             
             yield return null;
         }
