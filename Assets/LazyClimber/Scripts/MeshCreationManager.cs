@@ -6,9 +6,17 @@ namespace LazyClimber
 {
     public class MeshCreationManager : MonoBehaviour
     {
-
+        //Public events for emitting messages to listeners 
         public static event Action<string> OnBeginDraw, OnEndDraw; 
         
+        // Variables
+        public Camera mainCamera;
+        
+        // Lifecycle methods
+        
+        // Grabs the main camera from assigned active player input.
+        private void Start() => mainCamera = GetComponent<PlayerInput>().camera;
+
         // Methods to detect user Input
         
         public void BeginDraw(InputAction.CallbackContext ctx)
