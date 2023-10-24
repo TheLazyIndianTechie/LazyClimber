@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.Serialization;
 
 namespace LazyClimber
@@ -60,21 +61,20 @@ namespace LazyClimber
             drawing.AddComponent<MeshRenderer>(); // Handles the rendering of the object (Renders the object with mat, etc)
             
             // Create the mesh
-            
             var mesh = new Mesh(); // Initialize an actual mesh
-            var vertices = new Vector3[8]; // Define the vertices array (8 points form the cube array)
+            List<Vector3> vertices = new List<Vector3>(new Vector3[8]); // Define a list of vertices (8 points form the cube array)
             
             Vector3 startPosition = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)); // Set Z as 10 because camera is -10 from origin.
-            Vector3 temp = new Vector3(startPosition.x, startPosition.y, 0.5f); // Hav all drawings start from a single point.
+            Vector3 temp = new Vector3(startPosition.x, startPosition.y, 0.5f); // Have all drawings start from a single point.
             
             // Construction of triangles array
             // Cube is 6 faces and each face is 2 triangles. so 12 triangles! 
             // One triangle is 3 verts so total of 36 verts.
             // TODO: Research more on Winding - Unity handles winding in clock-wise for front-facing and anti-clockwise for back facing?
 
-            for (var i = 0; i < vertices.Length; i++) vertices[i] = temp; // For loop instantiates all 8 points at the temp pos.
+            for (int i = 0; i < vertices.Count; i++) vertices[i] = temp; // For loop instantiates all 8 points at the temp pos.
 
-            var triangles = new int[36]; // creating a triangle array of size 36 as needed
+            List<int> triangles = new List<int>(new int[36]); // creating a triangle list of collection size 36 as needed
             
             // Construct the faces
             //TODO: Vinay to Read more Reference: https://ilkinulas.github.io/development/unity/2016/04/30/cube-mesh-in-unity3d.html
@@ -128,11 +128,36 @@ namespace LazyClimber
             triangles[35] = 6;
             
             // Assign triangles and vertices to meshes
-            mesh.vertices = vertices;
-            mesh.triangles = triangles;
+            // Convert from list to arrays
+            mesh.vertices = vertices.ToArray();
+            mesh.triangles = triangles.ToArray();
 
             // Assign the mesh to the drawing gameobject
             drawing.GetComponent<MeshFilter>().mesh = mesh;
+
+            Vector3 lastMousePosition = startPosition; // Calculate vertices after storing mouse position
+
+            while (true) // bad practice but fine for now. while loop to add more verts and triangles
+            {
+                vertices.AddRange(new Vector3[4]);
+                triangles.AddRange(new int[30]);
+
+                // Calculate new vertices
+                int vIndex = vertices.Count - 8;
+                int vIndex0 = vIndex + 0;
+                int vIndex1 = vIndex + 1;
+                int vIndex2 = vIndex + 2;
+                int vIndex3 = vIndex + 3;
+                int vIndex4 = vIndex + 4;
+                int vIndex5 = vIndex + 5;
+                int vIndex6 = vIndex + 6;
+                int vIndex7 = vIndex + 7;
+                
+                // Calculate direction by getting difference between last mouse position and current mouse position
+                Vector3 currentMousePosition = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10f));
+                Vector3 mouseForwardVector = (lastMousePosition - currentMousePosition).normalized;
+
+            }
             
             yield return null;
         }
