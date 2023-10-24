@@ -74,6 +74,61 @@ namespace LazyClimber
 
             for (var i = 0; i < vertices.Length; i++) vertices[i] = temp; // For loop instantiates all 8 points at the temp pos.
 
+            var triangles = new int[36]; // creating a triangle array of size 36 as needed
+            
+            // Construct the faces
+            //TODO: Vinay to Read more Reference: https://ilkinulas.github.io/development/unity/2016/04/30/cube-mesh-in-unity3d.html
+            
+            // Front face
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            
+            // Top face
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            
+            // Right face
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            
+            // Left face
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            
+            // Back face
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            
+            // Bottom face
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            triangles[0] = 0;
+            
+            
+
 
 
 
