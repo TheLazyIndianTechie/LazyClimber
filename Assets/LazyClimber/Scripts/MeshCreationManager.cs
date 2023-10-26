@@ -148,7 +148,7 @@ namespace LazyClimber
             // Assign the mesh to the drawing gameobject
             drawing.GetComponent<MeshFilter>().mesh = mesh;
             
-            // Assign colour to render out mat. Set the material to unlit
+            // Assign colour to render out mat. Set the material to URP unlit
             drawing.GetComponent<Renderer>().material.shader = Shader.Find("Universal Render Pipeline/Unlit");
             drawing.GetComponent<Renderer>().material.color = drawingColor;  
             
