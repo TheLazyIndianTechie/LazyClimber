@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Serialization;
 using GameObject = UnityEngine.GameObject;
 
 namespace LazyClimber
@@ -15,6 +16,8 @@ namespace LazyClimber
         // Variables
         [SerializeField] private Camera mainCamera;
         private GameObject _container;
+        [SerializeField] private Color drawingColor = Color.yellow; // Allow an option for drawing colour to be chosen, defaults to yellow
+        
         
         // Lifecycle methods
         
@@ -145,11 +148,12 @@ namespace LazyClimber
             // Assign the mesh to the drawing gameobject
             drawing.GetComponent<MeshFilter>().mesh = mesh;
             
-            // Assign colour to material.
-            drawing.GetComponent<Renderer>().material.color = Color.black;  
+            // Assign colour to render out mat. Set the material to unlit
+            drawing.GetComponent<Renderer>().material.shader = Shader.Find("Universal Render Pipeline/Unlit");
+            drawing.GetComponent<Renderer>().material.color = drawingColor;  
             
-
-            Vector3 lastMousePosition = startPosition; // Calculate vertices after storing mouse position
+            // Calculate vertices after storing mouse position
+            Vector3 lastMousePosition = startPosition; 
 
             while (true) // bad practice but fine for now. while loop to add more verts and triangles
             {
@@ -163,7 +167,7 @@ namespace LazyClimber
                     yield return null;
                 }
                 
-                
+                // Add maximum range for vertices and triangles.
                 vertices.AddRange(new Vector3[4]);
                 triangles.AddRange(new int[30]);
 

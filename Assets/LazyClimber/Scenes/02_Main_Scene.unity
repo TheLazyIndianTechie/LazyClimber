@@ -913,6 +913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
+  drawingColor: {r: 1, g: 0.4198113, b: 0.83835155, a: 1}
 --- !u!1 &2009560551
 GameObject:
   m_ObjectHideFlags: 0
