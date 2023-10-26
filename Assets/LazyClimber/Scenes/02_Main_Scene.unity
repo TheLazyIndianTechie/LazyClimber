@@ -1053,6 +1053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   drawingColor: {r: 1, g: 0.4198113, b: 0.83835155, a: 1}
+  drawArea: {fileID: 2050279452}
 --- !u!1 &1751209450
 GameObject:
   m_ObjectHideFlags: 0

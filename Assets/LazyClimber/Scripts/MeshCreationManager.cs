@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Linq;
 using UnityEngine.Serialization;
 using GameObject = UnityEngine.GameObject;
 
@@ -18,7 +19,11 @@ namespace LazyClimber
         private GameObject _container;
         [SerializeField] private Color drawingColor = Color.yellow; // Allow an option for drawing colour to be chosen, defaults to yellow
         
-        
+        public MeshCollider drawArea;
+
+        // Detect if player cursor is within the bounds of the drawing panel bounds
+        private bool IsCursorInDrawArea => drawArea.bounds.Contains(mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 11)));
+
         // Lifecycle methods
         
         // Grabs the main camera from assigned active player input.
@@ -26,7 +31,7 @@ namespace LazyClimber
         private void Start()
         {
             mainCamera = GetComponent<PlayerInput>().camera;
-            _container = new GameObject("Drawing Board");
+            _container = new GameObject("Drawing Board"); // To hold all runtime created drawing meshes
         }
 
         // Methods to detect user Input
@@ -155,7 +160,7 @@ namespace LazyClimber
             // Calculate vertices after storing mouse position
             Vector3 lastMousePosition = startPosition; 
 
-            while (true) // bad practice but fine for now. while loop to add more verts and triangles
+            while (IsCursorInDrawArea) // Check if cursor is in draw area -> while loop to add more verts and triangles based on drawing
             {
                 var minDistance = 0.1f; // Min distance between prev vertices and new vertices to avoid spiking issue
                 var distance = Vector3.Distance(mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y,10)), lastMousePosition); // Calculate the difference between mouse positions
