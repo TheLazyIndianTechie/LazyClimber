@@ -3,7 +3,9 @@ using UnityEngine.InputSystem;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Linq;
 using UnityEngine.Serialization;
+using GameObject = UnityEngine.GameObject;
 
 namespace LazyClimber
 {
@@ -14,12 +16,23 @@ namespace LazyClimber
         
         // Variables
         [SerializeField] private Camera mainCamera;
+        private GameObject _container;
+        [SerializeField] private Color drawingColor = Color.yellow; // Allow an option for drawing colour to be chosen, defaults to yellow
         
+        public MeshCollider drawArea;
+
+        // Detect if player cursor is within the bounds of the drawing panel bounds
+        private bool IsCursorInDrawArea => drawArea.bounds.Contains(mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 11)));
+
         // Lifecycle methods
         
         // Grabs the main camera from assigned active player input.
         // TODO: Need a better way of handling the nulls if Camera is not assigned. Maybe do a camera.main but might be expensive. Fix after assignment
-        private void Start() => mainCamera = GetComponent<PlayerInput>().camera;
+        private void Start()
+        {
+            mainCamera = GetComponent<PlayerInput>().camera;
+            _container = new GameObject("Drawing Board"); // To hold all runtime created drawing meshes
+        }
 
         // Methods to detect user Input
         
@@ -27,6 +40,7 @@ namespace LazyClimber
         {
             //Return if context is not performed. Avoid multiples
             if (!ctx.performed) return;
+            
             
             // Calling DrawMesh coroutine
             StartCoroutine(DrawMesh());
@@ -55,6 +69,8 @@ namespace LazyClimber
         {
             // Create a GameObject and assign it
             var drawing = new GameObject("DrawnMesh");
+
+            drawing.transform.localScale = new Vector3(1, 1, 0); // Makes the drawing 2D by limiting the z depth.
             
             // Adding a MeshFilter and a MeshRenderer to the drawnMesh go.
             drawing.AddComponent<MeshFilter>(); // Defines the 3d geometry and shape of the object (verts, etc)
@@ -132,12 +148,19 @@ namespace LazyClimber
             mesh.vertices = vertices.ToArray();
             mesh.triangles = triangles.ToArray();
 
+            
+            drawing.transform.parent = _container.transform;
             // Assign the mesh to the drawing gameobject
             drawing.GetComponent<MeshFilter>().mesh = mesh;
+            
+            // Assign colour to render out mat. Set the material to URP unlit
+            drawing.GetComponent<Renderer>().material.shader = Shader.Find("Universal Render Pipeline/Unlit");
+            drawing.GetComponent<Renderer>().material.color = drawingColor;  
+            
+            // Calculate vertices after storing mouse position
+            Vector3 lastMousePosition = startPosition; 
 
-            Vector3 lastMousePosition = startPosition; // Calculate vertices after storing mouse position
-
-            while (true) // bad practice but fine for now. while loop to add more verts and triangles
+            while (IsCursorInDrawArea) // Check if cursor is in draw area -> while loop to add more verts and triangles based on drawing
             {
                 var minDistance = 0.1f; // Min distance between prev vertices and new vertices to avoid spiking issue
                 var distance = Vector3.Distance(mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y,10)), lastMousePosition); // Calculate the difference between mouse positions
@@ -149,7 +172,7 @@ namespace LazyClimber
                     yield return null;
                 }
                 
-                
+                // Add maximum range for vertices and triangles.
                 vertices.AddRange(new Vector3[4]);
                 triangles.AddRange(new int[30]);
 
