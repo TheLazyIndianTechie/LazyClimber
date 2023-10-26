@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.Serialization;
+using GameObject = UnityEngine.GameObject;
 
 namespace LazyClimber
 {
@@ -14,12 +14,17 @@ namespace LazyClimber
         
         // Variables
         [SerializeField] private Camera mainCamera;
+        private GameObject _container;
         
         // Lifecycle methods
         
         // Grabs the main camera from assigned active player input.
         // TODO: Need a better way of handling the nulls if Camera is not assigned. Maybe do a camera.main but might be expensive. Fix after assignment
-        private void Start() => mainCamera = GetComponent<PlayerInput>().camera;
+        private void Start()
+        {
+            mainCamera = GetComponent<PlayerInput>().camera;
+            _container = new GameObject("Drawing Board");
+        }
 
         // Methods to detect user Input
         
@@ -27,6 +32,7 @@ namespace LazyClimber
         {
             //Return if context is not performed. Avoid multiples
             if (!ctx.performed) return;
+            
             
             // Calling DrawMesh coroutine
             StartCoroutine(DrawMesh());
@@ -132,8 +138,13 @@ namespace LazyClimber
             mesh.vertices = vertices.ToArray();
             mesh.triangles = triangles.ToArray();
 
+            
+            drawing.transform.parent = _container.transform;
             // Assign the mesh to the drawing gameobject
             drawing.GetComponent<MeshFilter>().mesh = mesh;
+            
+            drawing.GetComponent<Renderer>().material.color = Color.black; // Assign colour to material. 
+            
 
             Vector3 lastMousePosition = startPosition; // Calculate vertices after storing mouse position
 
