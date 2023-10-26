@@ -3,9 +3,9 @@ using UnityEngine.InputSystem;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Xml.Linq;
-using UnityEngine.Serialization;
 using GameObject = UnityEngine.GameObject;
+using UnityEngine.ProBuilder;
+using UnityEngine.ProBuilder.MeshOperations;
 
 namespace LazyClimber
 {
@@ -16,10 +16,14 @@ namespace LazyClimber
         
         // Variables
         [SerializeField] private Camera mainCamera;
-        private GameObject _container;
+        GameObject drawing; // The drawn meshes
         [SerializeField] private Color drawingColor = Color.yellow; // Allow an option for drawing colour to be chosen, defaults to yellow
         
         public MeshCollider drawArea;
+
+        public GameObject leftArm, rightArm;
+
+        bool hasDrawingStarted;
 
         // Detect if player cursor is within the bounds of the drawing panel bounds
         private bool IsCursorInDrawArea => drawArea.bounds.Contains(mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 11)));
@@ -28,19 +32,15 @@ namespace LazyClimber
         
         // Grabs the main camera from assigned active player input.
         // TODO: Need a better way of handling the nulls if Camera is not assigned. Maybe do a camera.main but might be expensive. Fix after assignment
-        private void Start()
-        {
-            mainCamera = GetComponent<PlayerInput>().camera;
-            _container = new GameObject("Drawing Board"); // To hold all runtime created drawing meshes
-        }
+        private void Start() => mainCamera = GetComponent<PlayerInput>().camera;
 
         // Methods to detect user Input
-        
         public void BeginDraw(InputAction.CallbackContext ctx)
         {
             //Return if context is not performed. Avoid multiples
             if (!ctx.performed) return;
-            
+
+            if (!IsCursorInDrawArea) return; // Avoid error if not in draw area
             
             // Calling DrawMesh coroutine
             StartCoroutine(DrawMesh());
@@ -56,19 +56,55 @@ namespace LazyClimber
             //Return if context is not performed. Avoid multiples
             if (!ctx.performed) return;
             
+            // Return if drawing has not started
+            if (!hasDrawingStarted) return;
+            hasDrawingStarted = false; // Set back to false for check.
+            
             // Killing off all coroutines
             StopAllCoroutines();
+            
+            // Call Redraw to apply mesh
+            Redraw();
+            
+            // Custom Probuilder calculate normals
+            CalculateNormals();
+
+            Mesh mesh = drawing.GetComponent<MeshFilter>().mesh;
+
+            
+            // Create left and right arm meshes and assign triangles and vertices
+            Mesh leftArmMesh = new Mesh();
+            leftArmMesh.vertices = mesh.vertices;
+            leftArmMesh.triangles = mesh.triangles;
+            leftArmMesh.normals = mesh.normals;
+            
+
+            Mesh rightArmMesh = new Mesh();
+            rightArmMesh.vertices = mesh.vertices;
+            rightArmMesh.triangles = mesh.triangles;
+            rightArmMesh.normals = mesh.normals;
+
+            // Assign meshes to left arm and right arm references
+            leftArm.GetComponent<MeshFilter>().mesh = leftArmMesh;
+            Debug.Log("Assigned Left Arm Mesh");
+            
+            rightArm.GetComponent<MeshFilter>().mesh = rightArmMesh;
+            Debug.Log("Assigned Right Arm Mesh");
             
             // Stop drawing when user releases input
             var message = "End Draw: " + ctx;
             Debug.Log(message);
             OnEndDraw?.Invoke(message);
+            
+            Destroy(drawing);
         }
 
         private IEnumerator DrawMesh()
         {
+            hasDrawingStarted = true; // Setting to true for bool check.
+            
             // Create a GameObject and assign it
-            var drawing = new GameObject("DrawnMesh");
+            drawing = new GameObject("DrawnMesh");
 
             drawing.transform.localScale = new Vector3(1, 1, 0); // Makes the drawing 2D by limiting the z depth.
             
@@ -147,9 +183,7 @@ namespace LazyClimber
             // Convert from list to arrays
             mesh.vertices = vertices.ToArray();
             mesh.triangles = triangles.ToArray();
-
             
-            drawing.transform.parent = _container.transform;
             // Assign the mesh to the drawing gameobject
             drawing.GetComponent<MeshFilter>().mesh = mesh;
             
@@ -261,6 +295,46 @@ namespace LazyClimber
                 
                 yield return null;
             }
+            
+        }
+
+        public void Redraw()
+        {
+            Mesh mesh = drawing.GetComponent<MeshFilter>().mesh;
+            Vector3[] vertices = mesh.vertices;
+            
+            // Redrawing from zero. Add the inverse of the first vertex for each vertex
+            for (int i = 1; i < vertices.Length; i++)
+            {
+                vertices[i] = new Vector3
+                (
+                    vertices[i].x + (vertices[0].x * -1),
+                    vertices[i].y + (vertices[0].y * -1),
+                    vertices[i].z + (vertices[0].z * -1)
+                );
+            }
+            
+            // Set the first vertex to zero
+            vertices[0] = Vector3.zero;
+
+            // Reapply vertices to mesh
+            mesh.vertices = vertices;
+
+        }
+        
+        // Custom method to use Pro Builder to calculate normals instead of inbuilt
+        private void CalculateNormals()
+        {
+            // Probuilder mesh filter added to object
+            new MeshImporter(drawing).Import();
+
+            ProBuilderMesh proMesh = drawing.GetComponent<ProBuilderMesh>(); 
+            
+            Normals.CalculateNormals(proMesh); // Getting pro builder to calculate normals
+            
+            proMesh.ToMesh();
+            proMesh.Refresh(); // Refresh for safety
+            
             
         }
     }
