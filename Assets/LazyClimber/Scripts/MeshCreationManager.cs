@@ -139,6 +139,17 @@ namespace LazyClimber
 
             while (true) // bad practice but fine for now. while loop to add more verts and triangles
             {
+                var minDistance = 0.1f; // Min distance between prev vertices and new vertices to avoid spiking issue
+                var distance = Vector3.Distance(mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y,10)), lastMousePosition); // Calculate the difference between mouse positions
+
+                // while distance < min distance - set to distance and return .
+                while (distance < minDistance)
+                {
+                    distance = Vector3.Distance(mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y,10)), lastMousePosition);
+                    yield return null;
+                }
+                
+                
                 vertices.AddRange(new Vector3[4]);
                 triangles.AddRange(new int[30]);
 
