@@ -3,7 +3,6 @@ using UnityEngine.InputSystem;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.Serialization;
 using GameObject = UnityEngine.GameObject;
 
 namespace LazyClimber
@@ -15,13 +14,14 @@ namespace LazyClimber
         
         // Variables
         [SerializeField] private Camera mainCamera;
-        private GameObject _drawing; // The drawn meshes
+        GameObject drawing; // The drawn meshes
         [SerializeField] private Color drawingColor = Color.yellow; // Allow an option for drawing colour to be chosen, defaults to yellow
         
         public MeshCollider drawArea;
 
         public GameObject leftArm, rightArm;
-        
+
+        bool hasDrawingStarted;
 
         // Detect if player cursor is within the bounds of the drawing panel bounds
         private bool IsCursorInDrawArea => drawArea.bounds.Contains(mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 11)));
@@ -37,7 +37,8 @@ namespace LazyClimber
         {
             //Return if context is not performed. Avoid multiples
             if (!ctx.performed) return;
-            
+
+            if (!IsCursorInDrawArea) return; // Avoid error if not in draw area
             
             // Calling DrawMesh coroutine
             StartCoroutine(DrawMesh());
@@ -53,13 +54,17 @@ namespace LazyClimber
             //Return if context is not performed. Avoid multiples
             if (!ctx.performed) return;
             
+            // Return if drawing has not started
+            if (!hasDrawingStarted) return;
+            hasDrawingStarted = false; // Set back to false for check.
+            
             // Killing off all coroutines
             StopAllCoroutines();
             
             // Call Redraw to apply mesh
             Redraw();
 
-            Mesh mesh = _drawing.GetComponent<MeshFilter>().mesh;
+            Mesh mesh = drawing.GetComponent<MeshFilter>().mesh;
 
             
             // Create left and right arm meshes and assign triangles and vertices
@@ -83,19 +88,21 @@ namespace LazyClimber
             Debug.Log(message);
             OnEndDraw?.Invoke(message);
             
-            Destroy(_drawing);
+            Destroy(drawing);
         }
 
         private IEnumerator DrawMesh()
         {
+            hasDrawingStarted = true; // Setting to true for bool check.
+            
             // Create a GameObject and assign it
-            _drawing = new GameObject("DrawnMesh");
+            drawing = new GameObject("DrawnMesh");
 
-            _drawing.transform.localScale = new Vector3(1, 1, 0); // Makes the drawing 2D by limiting the z depth.
+            drawing.transform.localScale = new Vector3(1, 1, 0); // Makes the drawing 2D by limiting the z depth.
             
             // Adding a MeshFilter and a MeshRenderer to the drawnMesh go.
-            _drawing.AddComponent<MeshFilter>(); // Defines the 3d geometry and shape of the object (verts, etc)
-            _drawing.AddComponent<MeshRenderer>(); // Handles the rendering of the object (Renders the object with mat, etc)
+            drawing.AddComponent<MeshFilter>(); // Defines the 3d geometry and shape of the object (verts, etc)
+            drawing.AddComponent<MeshRenderer>(); // Handles the rendering of the object (Renders the object with mat, etc)
             
             // Create the mesh
             var mesh = new Mesh(); // Initialize an actual mesh
@@ -170,11 +177,11 @@ namespace LazyClimber
             mesh.triangles = triangles.ToArray();
             
             // Assign the mesh to the drawing gameobject
-            _drawing.GetComponent<MeshFilter>().mesh = mesh;
+            drawing.GetComponent<MeshFilter>().mesh = mesh;
             
             // Assign colour to render out mat. Set the material to URP unlit
-            _drawing.GetComponent<Renderer>().material.shader = Shader.Find("Universal Render Pipeline/Unlit");
-            _drawing.GetComponent<Renderer>().material.color = drawingColor;  
+            drawing.GetComponent<Renderer>().material.shader = Shader.Find("Universal Render Pipeline/Unlit");
+            drawing.GetComponent<Renderer>().material.color = drawingColor;  
             
             // Calculate vertices after storing mouse position
             Vector3 lastMousePosition = startPosition; 
@@ -285,7 +292,7 @@ namespace LazyClimber
 
         public void Redraw()
         {
-            Mesh mesh = _drawing.GetComponent<MeshFilter>().mesh;
+            Mesh mesh = drawing.GetComponent<MeshFilter>().mesh;
             Vector3[] vertices = mesh.vertices;
             
             // Redrawing from zero. Add the inverse of the first vertex for each vertex
