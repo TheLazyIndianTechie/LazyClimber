@@ -4,6 +4,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using GameObject = UnityEngine.GameObject;
+using UnityEngine.ProBuilder;
+using UnityEngine.ProBuilder.MeshOperations;
 
 namespace LazyClimber
 {
@@ -63,6 +65,9 @@ namespace LazyClimber
             
             // Call Redraw to apply mesh
             Redraw();
+            
+            // Custom Probuilder calculate normals
+            CalculateNormals();
 
             Mesh mesh = drawing.GetComponent<MeshFilter>().mesh;
 
@@ -71,10 +76,13 @@ namespace LazyClimber
             Mesh leftArmMesh = new Mesh();
             leftArmMesh.vertices = mesh.vertices;
             leftArmMesh.triangles = mesh.triangles;
+            leftArmMesh.normals = mesh.normals;
+            
 
             Mesh rightArmMesh = new Mesh();
             rightArmMesh.vertices = mesh.vertices;
             rightArmMesh.triangles = mesh.triangles;
+            rightArmMesh.normals = mesh.normals;
 
             // Assign meshes to left arm and right arm references
             leftArm.GetComponent<MeshFilter>().mesh = leftArmMesh;
@@ -312,6 +320,22 @@ namespace LazyClimber
             // Reapply vertices to mesh
             mesh.vertices = vertices;
 
+        }
+        
+        // Custom method to use Pro Builder to calculate normals instead of inbuilt
+        private void CalculateNormals()
+        {
+            // Probuilder mesh filter added to object
+            new MeshImporter(drawing).Import();
+
+            ProBuilderMesh proMesh = drawing.GetComponent<ProBuilderMesh>(); 
+            
+            Normals.CalculateNormals(proMesh); // Getting pro builder to calculate normals
+            
+            proMesh.ToMesh();
+            proMesh.Refresh(); // Refresh for safety
+            
+            
         }
     }
 }
