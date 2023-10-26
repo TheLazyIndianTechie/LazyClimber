@@ -35,7 +35,6 @@ namespace LazyClimber
         }
 
         // Methods to detect user Input
-        
         public void BeginDraw(InputAction.CallbackContext ctx)
         {
             //Return if context is not performed. Avoid multiples
