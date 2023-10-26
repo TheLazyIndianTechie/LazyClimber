@@ -61,6 +61,8 @@ namespace LazyClimber
         {
             // Create a GameObject and assign it
             var drawing = new GameObject("DrawnMesh");
+
+            drawing.transform.localScale = new Vector3(1, 1, 0); // Makes the drawing 2D by limiting the z depth.
             
             // Adding a MeshFilter and a MeshRenderer to the drawnMesh go.
             drawing.AddComponent<MeshFilter>(); // Defines the 3d geometry and shape of the object (verts, etc)
@@ -143,7 +145,8 @@ namespace LazyClimber
             // Assign the mesh to the drawing gameobject
             drawing.GetComponent<MeshFilter>().mesh = mesh;
             
-            drawing.GetComponent<Renderer>().material.color = Color.black; // Assign colour to material. 
+            // Assign colour to material.
+            drawing.GetComponent<Renderer>().material.color = Color.black;  
             
 
             Vector3 lastMousePosition = startPosition; // Calculate vertices after storing mouse position
