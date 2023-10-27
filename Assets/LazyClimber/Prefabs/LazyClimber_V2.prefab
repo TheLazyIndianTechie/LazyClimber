@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4004380231407891603}
   - component: {fileID: 3139282958916847360}
   m_Layer: 0
-  m_Name: LazyClimber
+  m_Name: LazyClimber_V2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,7 +181,6 @@ GameObject:
   - component: {fileID: 9138741092913359192}
   - component: {fileID: 7291463724943346999}
   - component: {fileID: 2735644394028108954}
-  - component: {fileID: 8601339255399853842}
   - component: {fileID: 7459880765716086192}
   - component: {fileID: 3763516797023055310}
   m_Layer: 0
@@ -256,28 +255,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &8601339255399853842
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2473532052573014826}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!54 &7459880765716086192
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -302,9 +279,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!138 &3763516797023055310
 FixedJoint:
   m_ObjectHideFlags: 0
@@ -331,7 +308,6 @@ GameObject:
   - component: {fileID: 2714072367404305646}
   - component: {fileID: 1879265654365716482}
   - component: {fileID: 1207377298785564811}
-  - component: {fileID: 2497044326294737747}
   - component: {fileID: 4403541936130472047}
   - component: {fileID: 4406382841626895391}
   m_Layer: 0
@@ -406,28 +382,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2497044326294737747
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2630361834938301308}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!54 &4403541936130472047
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -452,9 +406,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!138 &4406382841626895391
 FixedJoint:
   m_ObjectHideFlags: 0
