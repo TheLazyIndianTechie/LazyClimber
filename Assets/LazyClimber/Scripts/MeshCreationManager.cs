@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using GameObject = UnityEngine.GameObject;
 using UnityEngine.ProBuilder;
 using UnityEngine.ProBuilder.MeshOperations;
@@ -78,6 +79,7 @@ namespace LazyClimber
             leftArmMesh.triangles = mesh.triangles;
             leftArmMesh.normals = mesh.normals;
             
+            
 
             Mesh rightArmMesh = new Mesh();
             rightArmMesh.vertices = mesh.vertices;
@@ -87,9 +89,13 @@ namespace LazyClimber
             // Assign meshes to left arm and right arm references
             leftArm.GetComponent<MeshFilter>().mesh = leftArmMesh;
             Debug.Log("Assigned Left Arm Mesh");
+            leftArm.AddComponent<MeshCollider>().convex = true;
+            Debug.Log(leftArm.GetComponent<MeshCollider>().convex.ToString());
             
             rightArm.GetComponent<MeshFilter>().mesh = rightArmMesh;
             Debug.Log("Assigned Right Arm Mesh");
+            rightArm.AddComponent<MeshCollider>().convex = true;
+            Debug.Log(rightArm.GetComponent<MeshCollider>().convex.ToString());
             
             // Stop drawing when user releases input
             var message = "End Draw: " + ctx;
