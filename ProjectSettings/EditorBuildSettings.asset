@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/LazyClimber/Scenes/01_Start_Scene.unity
     guid: 567e62ddcb1d5447f9cc65c1eec9bd9e
   - enabled: 1
-    path: Assets/LazyClimber/Scenes/02_Main_Scene.unity
-    guid: 24f434550e99c4d3a8b539292d1ce8f8
+    path: Assets/LazyClimber/Scenes/02_Main_Scene_V2.unity
+    guid: 8219e155ff9ac456d9a98d58af650824
   m_configObjects: {}

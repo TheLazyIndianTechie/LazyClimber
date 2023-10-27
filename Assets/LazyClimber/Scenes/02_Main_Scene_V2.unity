@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 6c154636a358e41b4bcc5d4158c4c529, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -37,8 +37,8 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_Sun: {fileID: 203844588}
+  m_IndirectSpecularColor: {r: 0.20410062, g: 0.03699002, b: 0.11608247, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,8 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 63b16d026d1064f8c8ca805ea6bed122,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -150,6 +151,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Green_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -240,6 +246,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_13
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -313,6 +324,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -388,6 +404,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_03
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -461,6 +482,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_09
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -550,6 +576,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Green_10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -659,6 +690,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_11
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -732,6 +768,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -822,6 +863,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_09
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -910,6 +956,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Green_08
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -1016,7 +1067,7 @@ GameObject:
   - component: {fileID: 203844588}
   - component: {fileID: 203844587}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1150,6 +1201,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_11
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1239,6 +1295,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_08
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1247,12 +1308,12 @@ PrefabInstance:
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.821
+      value: 2.61
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.442
+      value: -1.1
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -1312,6 +1373,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_08
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -1386,6 +1452,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_09
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -1476,6 +1547,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_02
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1549,6 +1625,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -1639,6 +1720,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_07
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1727,6 +1813,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Green_13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -1817,6 +1908,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_14
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1906,6 +2002,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_11
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1979,6 +2080,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_08
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -2085,6 +2191,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -2265,6 +2376,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_09
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2338,6 +2454,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_06
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -2547,6 +2668,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_07
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2620,6 +2746,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_08
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -2710,6 +2841,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_10
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2799,6 +2935,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_04
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2872,6 +3013,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -2947,6 +3093,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_09
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3021,6 +3172,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_08
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3094,6 +3250,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -3184,6 +3345,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_03
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3257,6 +3423,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -3347,6 +3518,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_14
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3435,6 +3611,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Green_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -3525,6 +3706,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_14
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3613,6 +3799,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Green_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -3739,6 +3930,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_07
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3827,6 +4023,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Green_14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -3917,6 +4118,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_09
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3995,7 +4201,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4
   m_IsActive: 1
 --- !u!4 &735133240
 Transform:
@@ -4112,6 +4318,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_02
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4200,6 +4411,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Green_12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -4290,6 +4506,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_03
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4379,6 +4600,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_07
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4452,6 +4678,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_06
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -4737,6 +4968,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_06
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4946,20 +5182,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_14
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.57
+      value: 3.57
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.37
+      value: 2.65
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -5019,6 +5260,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -5108,6 +5354,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Green_10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -5481,6 +5732,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_11
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5570,6 +5826,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_05
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5644,6 +5905,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_10
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5717,6 +5983,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -5900,7 +6171,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4
   m_IsActive: 1
 --- !u!4 &1020456939
 Transform:
@@ -5991,6 +6262,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_04
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6064,6 +6340,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -6154,6 +6435,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_09
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6243,6 +6529,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_11
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6316,6 +6607,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -6406,6 +6702,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_08
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6494,6 +6795,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Green_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -6584,6 +6890,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_02
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6657,6 +6968,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -6732,6 +7048,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_09
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6805,6 +7126,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -6929,6 +7255,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_02
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7018,6 +7349,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_10
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7094,7 +7430,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4
   m_IsActive: 1
 --- !u!4 &1192254301
 Transform:
@@ -7169,6 +7505,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -7259,6 +7600,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_08
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7347,6 +7693,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Green_12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -7437,6 +7788,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7511,6 +7867,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7584,6 +7945,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -7731,6 +8097,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_06
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -7927,6 +8298,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_03
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8015,6 +8391,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Green_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -8105,20 +8486,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_08
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.821
+      value: 3.74
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.442
+      value: 3.55
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -8181,7 +8567,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4
   m_IsActive: 1
 --- !u!4 &1408936288
 Transform:
@@ -8257,6 +8643,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_04
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8331,6 +8722,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_10
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8404,6 +8800,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -8494,6 +8895,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_10
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8568,6 +8974,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_06
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8641,6 +9052,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -8731,6 +9147,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8820,6 +9241,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_05
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8894,6 +9320,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_04
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8967,6 +9398,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -9057,6 +9493,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9131,6 +9572,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_05
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9204,6 +9650,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -9294,6 +9745,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9367,6 +9823,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -9457,6 +9918,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_12
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9531,6 +9997,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_09
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9604,6 +10075,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -9693,6 +10169,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Green_13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -9896,6 +10377,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_06
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9985,6 +10471,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_04
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10073,6 +10564,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Green_09
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -10182,7 +10678,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4
   m_IsActive: 1
 --- !u!4 &1710619126
 Transform:
@@ -10273,6 +10769,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Green_07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -10396,6 +10897,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_12
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10469,6 +10975,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -10559,6 +11070,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_11
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10632,6 +11148,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -10712,6 +11233,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -10802,6 +11328,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_05
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10891,6 +11422,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_04
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10964,6 +11500,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_08
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -11054,6 +11595,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_11
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11130,7 +11676,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4
   m_IsActive: 1
 --- !u!4 &1981765492
 Transform:
@@ -11205,6 +11751,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -11295,6 +11846,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_06
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11384,6 +11940,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_06
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11457,6 +12018,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -11616,6 +12182,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11705,6 +12276,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_13
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11793,6 +12369,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Green_13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -11989,6 +12570,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_02
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12077,6 +12663,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Green_07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -12167,6 +12758,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12255,6 +12851,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Green_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -12379,6 +12980,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_12
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12458,6 +13064,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
@@ -12548,6 +13159,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Green_06
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12622,6 +13238,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_06
       objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12695,6 +13316,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_Variant_Yellow_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507715090793722839, guid: 249f08f7bd0ea41c39666fce756a644c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8999338322009279980, guid: 249f08f7bd0ea41c39666fce756a644c,
         type: 3}
