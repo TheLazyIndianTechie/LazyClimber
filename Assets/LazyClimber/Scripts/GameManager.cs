@@ -17,6 +17,7 @@ namespace LazyClimber
             Level02 = 2,
             Level03 = 4,
         }
+        
 
         private void Awake()
         {
@@ -43,7 +44,14 @@ namespace LazyClimber
         public void Lose()
         {
             Debug.Log("You Lose");
+            UIController();
         }
+        
+        private void UIController()
+        {
+            
+        }
+        
 
     }
 }
