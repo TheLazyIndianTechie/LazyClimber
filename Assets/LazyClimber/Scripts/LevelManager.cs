@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 namespace LazyClimber
@@ -7,17 +8,19 @@ namespace LazyClimber
         // Variables
         [SerializeField] private float levelTimer = 60f;
         private bool _hasPlayerFinishedLevel = false;
+        [SerializeField] private TMP_Text counterDisplay;
         
         private void Update()
         {
             levelTimer -= Time.deltaTime; // Decrement level timer per second
-            // Debug.Log("Level Timer:  " + levelTimer);
+            
+            counterDisplay.SetText("{0:1} seconds", levelTimer); // Set a formatted counter display
+            
             if (_hasPlayerFinishedLevel) return; // Return if player has finished level
 
             if (levelTimer <= 0)
             {
                 GameManager.Instance.Lose();
-                
             }
         }
 
