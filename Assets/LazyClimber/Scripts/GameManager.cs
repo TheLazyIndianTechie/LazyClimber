@@ -18,6 +18,9 @@ namespace LazyClimber
             Level03 = 4,
         }
         
+        
+        // Events
+        public static event Action<string> OnGameOver, OnPlayerWin; 
 
         private void Awake()
         {
@@ -38,20 +41,15 @@ namespace LazyClimber
         
         public void Win()
         {
+            OnPlayerWin?.Invoke("You Win");
             Debug.Log("You Won");
         }
 
         public void Lose()
         {
+            OnGameOver?.Invoke("You Lose!");
             Debug.Log("You Lose");
-            UIController();
-        }
-        
-        private void UIController()
-        {
             
         }
-        
-
     }
 }
