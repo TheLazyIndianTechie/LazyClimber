@@ -31,5 +31,19 @@ namespace LazyClimber
         public void LoadLevel02() => SceneManager.LoadSceneAsync((int)SceneIndex.Level02);
         public void LoadLevel03() => SceneManager.LoadSceneAsync((int)SceneIndex.Level03);
         
+        // Gameplay methods
+        public void RestartGame() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        public void EndGame() => LoadMenuScene();
+        
+        public void Win()
+        {
+            Debug.Log("You Won");
+        }
+
+        public void Lose()
+        {
+            Debug.Log("You Lose");
+        }
+
     }
 }
