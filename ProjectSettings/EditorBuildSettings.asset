@@ -5,10 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/LazyClimber/Scenes/01_Start_Scene.unity
-    guid: 567e62ddcb1d5447f9cc65c1eec9bd9e
   - enabled: 1
-    path: Assets/LazyClimber/Scenes/02_Main_Scene_V2.unity
-    guid: 8219e155ff9ac456d9a98d58af650824
+    path: Assets/LazyClimber/Scenes/Menus/01_Start_Scene_V2.unity
+    guid: 94dd18070d97c4948a5343eb435d7e42
+  - enabled: 1
+    path: Assets/LazyClimber/Scenes/Levels/02_Level_01_V1.unity
+    guid: b93a36320cc354cbeb42d322eeba2f49
+  - enabled: 1
+    path: Assets/LazyClimber/Scenes/Levels/03_Level_02_V1.unity
+    guid: b26de222b518749888eb2b86fe07cb0c
+  - enabled: 1
+    path: Assets/LazyClimber/Scenes/Levels/04_Level_03_V1.unity
+    guid: 01ec5a501c540484faf697e9ed686948
   m_configObjects: {}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -5,6 +6,9 @@ namespace LazyClimber
 {
     public class GameManager : MonoBehaviour
     {
+        // Singleton 
+        public static GameManager Instance { get; private set; }
+        
         // Create a scene enum
         private enum SceneIndex
         {
@@ -12,6 +16,13 @@ namespace LazyClimber
             Level01 = 1,
             Level02 = 2,
             Level03 = 4,
+        }
+
+        private void Awake()
+        {
+            // Check singleton instance
+            if (Instance != null && Instance != this) Destroy(this);
+            else Instance = this;
         }
 
         // Load scene methods. Just for ease of calling
